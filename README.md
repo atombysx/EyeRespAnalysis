@@ -35,12 +35,12 @@ This repository contains the functions, analysed datasets from each mouse and .m
 ###### **For analysis on more specific responses to different direction gratings:**
 The processes are mainly organised in the combine_EyeDb_live.mlx, plot_comparison.mlx, and plot_comparison_std.mlx live script files.
 To reproduce the same results, you can follow this process:
-1. Open combine_EyeDb_live.mlx live script:
+1. **Open combine_EyeDb_live.mlx live script:**
  - Run main_combineEyeDb.m function on each FRXXX_X_eyeDb.m db cell array.
  - Save the corresponding variables into one 'MouseID_X_EyeBallData.mat' file.
  - This function also plots all the variables with all the raw traces in individual trials responding to different gratings.
  -At the bottom, there are some old plots for running speed distributions.
-2. Variables in the 'MouseID_X_EyeBallData.mat' file:
+2. **Variables in the 'MouseID_X_EyeBallData.mat' file:**
    - They are first obtained from getEyeData_dev.m in the main_combineEyeDb.m function and processed with getStimulusSweepsLFR.m:
      - MouseID_X_pupil: the pupil size/10th percentile and, afterwards, is reduced from baseline.
      - MouseID_X_info: information of the experiments, from ppbox.infoPopulateTempLFR().
@@ -56,8 +56,50 @@ To reproduce the same results, you can follow this process:
      - MouseID_X_dmovement: eye movement displacement from complex number of deyeX and deyeY.
      - MouseID_X_velocity: MouseID_X_movement differentiated.
      - MouseID_X_dvelocity: MouseID_X_dmovement differentiated.
-3. Open plot_comparison.mlx:
+3. **Open plot_comparison.mlx:**
    - This file organises all the scatter plots.
    - The .mat files are loaded and plotted with the function plotSweepRespScatter() and angles are plotted with plotSweepRespScatterAngle().
-   - The sections are as follow:
-     - Pupil size scatter plots
+   - The sections are:
+     - Pupil size scatter plots for individual mice and combined.
+     - Pupil size scatter plots for running vs stationary.
+     - Eye X scatter plots for individual mice and combined.
+     - Eye Y scatter plots for individual mice and combined.
+     - Running speed scatter plots for individual mice and combined.
+     - d running speed scatter plots for individual mice and combined.
+     - eye movement scatter plots for individual mice and combined.
+     - Eye movement velocity scatter plots for individual mice and combined.
+     - Eye movement angles scatter plots for individual mice and combined.
+     - Eye movement dangles scatter plots for individual mice and combined.
+     - There's also a polar subplot at the end which is created by plotSweepRespPolarAngle().
+4. **Open the plot_comparison_std.mlx:**
+   - This file organises all the trace plots across timecourse.
+   - In this live script, the first half is much longer as it doesnt have a specific plotting function and the next half uses plotSweepRespRun()        and plotSweepRespAxisTrace().
+   - The variables are consistently called as 'responses_MouseID_X' in every section.
+   - The sections can be divided into 3 parts: 1. trace across timecourse for individual mice and combined, 2. running vs stationary traces, 3.        eye movement trace.
+   - First part sections:
+     - Pupil size trace plot (10 mice in one plot) and combined trace plot.
+     - eyeX (absolute value).
+     - eyeY (absolute value).
+     - deyeX (absolute value).
+     - deyeY (absolute value).
+     - dmovement.
+     - velocity.
+     - angle (circ_mean() used to calculate the mean instead of nanmean()).
+     - dangle (circ_mean() used to calculate the mean instead of nanmean()).
+     - dball.
+     - ball.
+   - Second part sections (uses plotSweepRespRun()):
+     - Pupil size, running vs stationary (threshold at 5 cm/s).
+     - deyeX (abs).
+     - deyeY (abs).
+     - angle (input the last parameter as 1 and the function will use circ_mean() instead).
+     - dmovement.
+     - velocity.
+   - Third part sections (eye movement trace averaged across trials):
+     - 13 subplots of eye movement traces in one plot using eyeX and eyeY.
+     - Eye movement trace plots using eyeX and eyeY, one plot for each mouse.
+     - Eye movement trace plots using deyeX and deyeY, one plot for each mouse.
+   
+## Directories of all the videos
+Check directory of videos.csv if you want the directories of some/all videos (it's also in 'videos to analyse' file in Sylvia's OneDrive folder).
+Or use getDirectoryAT.m and save_directories.mlx to do some edits.
