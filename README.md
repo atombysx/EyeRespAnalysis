@@ -42,17 +42,17 @@ To reproduce the same results, you can follow this process:
  -At the bottom, there are some old plots for running speed distributions.
 2. Variables in the 'MouseID_X_EyeBallData.mat' file:
   - They are first obtained from getEyeData_dev.m in the main_combineEyeDb.m function and processed with getStimulusSweepsLFR.m:
-    -MouseID_X_pupil: the pupil size/10th percentile and, afterwards, is reduced from baseline.
-    -MouseID_X_info: information of the experiments, from ppbox.infoPopulateTempLFR().
-    -MouseID_X_eyeX: X coordinate gauss filtered minus mean (not reduced from baseline).
-    -MouseID_X_eyeY: Y coordinate gauss filtered minus mean (not reduced from baseline).
-    -MouseID_X_deyeX: X coordinate gauss filtered minus mean and reduced from baseline afterwards.
-    -MouseID_X_deyeY: Y coordinate gauss filtered minus mean and reduced from baseline afterwards.
-    -MouseID_X_ball: running speed obtained from getRunningSpeed() and processed with getStimulusSweepsLFR().
-    -MouseID_X_dball: running speed same as above but reduced from baseline.
-    -MouseID_X_angle: angles calculated from the complex number of eyeX and eyeY.
-    -MouseID_X_dangle: angles calculated from complex number of deyeX and deyeY.
-    -MouseID_X_movement: eye movement displacement also from complex number of eyeX and eyeY.
-    -MouseID_X_dmovement: eye movement displacement from complex number of deyeX and deyeY.
-    -MouseID_X_velocity: MouseID_X_movement differentiated.
-    -MouseID_X_dvelocity: MouseID_X_dmovement differentiated.
+    - MouseID_X_pupil: the pupil size/10th percentile and, afterwards, is reduced from baseline.
+    - MouseID_X_info: information of the experiments, from ppbox.infoPopulateTempLFR().
+    - MouseID_X_eyeX: X coordinate gauss filtered minus mean (not reduced from baseline).
+    - MouseID_X_eyeY: Y coordinate gauss filtered minus mean (not reduced from baseline).
+    - MouseID_X_deyeX: X coordinate gauss filtered minus mean and reduced from baseline afterwards.
+    - MouseID_X_deyeY: Y coordinate gauss filtered minus mean and reduced from baseline afterwards.
+    - MouseID_X_ball: running speed obtained from getRunningSpeed() and processed with getStimulusSweepsLFR().
+    - MouseID_X_dball: running speed same as above but reduced from baseline.
+    - MouseID_X_angle: angles calculated from the complex number of eyeX and eyeY.
+    - MouseID_X_dangle: angles calculated from complex number of deyeX and deyeY.
+    - MouseID_X_movement: eye movement displacement also from complex number of eyeX and eyeY.
+    - MouseID_X_dmovement: eye movement displacement from complex number of deyeX and deyeY.
+    - MouseID_X_velocity: MouseID_X_movement differentiated.
+    - MouseID_X_dvelocity: MouseID_X_dmovement differentiated.
