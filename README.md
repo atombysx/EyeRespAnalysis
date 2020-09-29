@@ -23,14 +23,14 @@ This repository contains the functions, analysed datasets from each mouse and .m
 2. These live scripts are rather simple: they all use the functions main_SparseNoise, main_gratings, main_natMovies, and main_spontaneous to extract filtered raw eye data from getEyeData_dev.m only in experiments with the specific stimuli present and they are saved as 'StimuliType_MouseID_EyeBallData.mat'.
 3. The saved data then are classified as running vs stationary and histograms of running vs stationary are plotted in each live script.
 4. Variables in the StimulusMouseID_X_EyeBallData.mat:
- -Variables as nx1 size cells (n is the number of experiments):
-  -area:the real pupil sizes (in px)
-  -pupil: pupil size/percentile(10)
-  -x: gauss filtered minus mean
-  -y: gauss filtered minus mean
-  -ts: timepoints
-  -ball: running speed
- -combarea, combpupil, combx, comby, combts, combball: these are combined matrice from above cell arrays.
+  - Variables as nx1 size cells (n is the number of experiments):
+    - area:the real pupil sizes (in px)
+    - pupil: pupil size/percentile(10)
+    - x: gauss filtered minus mean
+    - y: gauss filtered minus mean
+    - ts: timepoints
+    - ball: running speed
+ - combarea, combpupil, combx, comby, combts, combball: these are combined matrice from above cell arrays.
 
 ###### **For analysis on more specific responses to different direction gratings:**
 The processes are mainly organised in the combine_EyeDb_live.mlx, plot_comparison.mlx, and plot_comparison_std.mlx live script files.
