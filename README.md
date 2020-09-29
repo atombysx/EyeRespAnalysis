@@ -4,7 +4,7 @@
 
 Analysis work based on eye data processed by Michael's software on matlab.
 
-This repository contains the functions, analysed datasets from each mouse and .mlx file managing the plots.
+This repository contains the functions, analysed datasets from each mouse and .mlx live scripts managing the analysis plots.
 
 ## The Workflow of Data Processing
 1. Run etGUI.m to analyse the pupil from the Michael's software.
