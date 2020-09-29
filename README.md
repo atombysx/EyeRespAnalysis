@@ -56,3 +56,8 @@ To reproduce the same results, you can follow this process:
      - MouseID_X_dmovement: eye movement displacement from complex number of deyeX and deyeY.
      - MouseID_X_velocity: MouseID_X_movement differentiated.
      - MouseID_X_dvelocity: MouseID_X_dmovement differentiated.
+3. Open plot_comparison.mlx:
+   - This file organises all the scatter plots.
+   - The .mat files are loaded and plotted with the function plotSweepRespScatter() and angles are plotted with plotSweepRespScatterAngle().
+   - The sections are as follow:
+     - Pupil size scatter plots
