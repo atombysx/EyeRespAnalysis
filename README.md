@@ -18,7 +18,7 @@ This repository contains the functions, analysed datasets from each mouse and .m
 'datasets' folder: these are processed datasets for distribution anaylsis to different stimuli and trace analysis to gratings which are saved from the live scripts' codes so you don't have to do that again.
 
 
-###### **For distributions of resposnes to different stimuli analysis:**
+## **For distributions of resposnes to different stimuli analysis:**
 1. The analysis was created on sparse_EyeDb_live.mlx (to sparse noise stimuli), spontaneous_EyeDb_live.mlx (to spontaneous stimuli), gratings_EyeDb_live.mlx (to direction gratings), and natMovies_EyeDb_live.mlx (to natural images).
 2. These live scripts are rather simple: they all use the functions main_SparseNoise, main_gratings, main_natMovies, and main_spontaneous to extract filtered raw eye data from getEyeData_dev.m only in experiments with the specific stimuli present and they are saved as 'StimuliType_MouseID_EyeBallData.mat'.
 3. The saved data then are classified as running vs stationary and histograms of running vs stationary are plotted in each live script.
@@ -32,7 +32,7 @@ This repository contains the functions, analysed datasets from each mouse and .m
     - ball: running speed
  - combarea, combpupil, combx, comby, combts, combball: these are combined matrice from above cell arrays.
 
-###### **For analysis on more specific responses to different direction gratings:**
+## **For analysis on more specific responses to different direction gratings:**
 The processes are mainly organised in the combine_EyeDb_live.mlx, plot_comparison.mlx, and plot_comparison_std.mlx live script files.
 To reproduce the same results, you can follow this process:
 1. **Open combine_EyeDb_live.mlx live script:**
