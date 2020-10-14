@@ -11,6 +11,9 @@ This repository contains the functions, analysed datasets from each mouse and .m
 2. Use getEyeData.m/getEyeData_dev.m to acess the filtered raw eye data.
 3. Save them and, if you want to work on responses to direction gratings, use main_combineEyeDb.m.
 
+## Dependencies
+Just one if you only want the analysis plots and data: Circular Statistics Toolbox (Directional Statistics) http://www.jstatsoft.org/v31/i10
+If you want to run the codes that generate the datasets, you need access to the zserver at the cortex lab and the codes should run perfectly.
 
 ## An overview of the the functions, analysis and datasets folders:
 'analysis and plots' folder: contains mostly the .mlx live script files which organise the plots and the codes that generate them.
