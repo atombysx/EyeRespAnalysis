@@ -9,7 +9,7 @@ else
 end
 
 
-
+nFigures = ceil(nRoi/ cellsPerFigure);
 
 for fig = 1: nFigures
    
