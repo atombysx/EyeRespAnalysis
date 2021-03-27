@@ -25,7 +25,7 @@ ETAmat = bsxfun(@minus,ETAmat, ETAbsl);
 end
 %% compute median resp and se
 ETA = squeeze(nanmean(ETAmat,1));
-ETAse = squeeze(std(ETAmat,1,1)/sqrt(size(etaT,2)));
+ETAse = squeeze(nanstd(ETAmat,1,1)/sqrt(size(etaT,2)));
 
 % %% plotting
 % figure
